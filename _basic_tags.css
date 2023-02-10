@@ -1,0 +1,82 @@
+.card {
+  font-family: arial;
+  font-size: 20px;
+  text-align: center;
+  color: black;
+  background-color: white;
+}
+
+platform */
+    max-height: 100vh; /* may need to be adjusted based on platform */
+	width: 100%;
+    max-width: 100vw;
+}
+
+html.mobile,
+css.mobile,
+body.mobile {
+    height: 100vh; /* may need to be adjusted based on platform */
+}
+
+/* TAGS */
+
+.tags {
+	margin-bottom: -0.5em;
+	margin-top: 0.5em;
+
+}
+
+.tablecontainer + .onesided .tags {
+	padding-bottom: 0;
+}
+
+.tag {
+    font-size: 1em;
+	padding: 0 .7em .1em .7em;
+	display: inline-block;
+	border-radius: 1.5em;
+	margin: .5em .5em .5em 0;
+	position: relative;
+	bottom: .5em;
+	color: black;
+}
+
+.tag {
+	background-color: #CCC;
+}
+
+.tag.IT {
+	background-color: #C0ECCC; /* green */
+}
+
+.tag.asdf {
+	background-color: #e7c1f9; /* purple */
+}
+
+.tag.Linux {
+	background-color: #F4CDA6; /* orange */
+}
+
+.tag.AWS {
+	background-color: #F9F0C1; /* yellow */
+}
+
+.tag.leech {
+	background-color: #F6A8A6; /* red */
+}
+
+.tag.marked {
+	background-color: #F6A8A6; /* red */
+}
+
+:not(.backtemplate) .backonly {
+	display: none;
+}
+
+.backtemplate .backonly {
+	display: block;
+}
+
+.backtemplate .frontonly {
+	display: none;
+}
