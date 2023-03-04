@@ -6,4 +6,4 @@ Two custom card templates (Basic and Cloze deletion) for Anki, AnkiMobile and An
 The Python code I used is not entirely by me, and has been only modified for additional functionality. 
 
 ## Images
-!(/relative/img.jpg?raw=true "Optional Title")
+![Default Template](https://github.com/Austinwu-rgb/Anki-Contrast-Tags-Template/solarized-yinyang.png)](#features)
