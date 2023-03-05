@@ -66,3 +66,215 @@
 	background-color: #F6A8A6; /* red */
 }
 
+
+html,
+body {
+	margin: 0 !important;
+	padding: 0;
+	height: 100%; /* may need to be adjusted based on platform */
+    max-height: 200vh; /* may need to be adjusted based on platform */
+	width: 100%;
+    max-width: 100vw;
+}
+
+html.mobile,
+body.mobile {
+    height: 100vh; /* may need to be adjusted based on platform, values higher than 100 may make the thing go off screen */
+
+}
+
+body {
+	font-family: "Noto Sans KR", Helvetica, Arial;
+	font-weight: 400;
+	font-size: 85%;
+	word-break: keep-all;
+	text-align: left;
+	overflow: hidden;
+    position: relative;
+    bottom: 1em;
+    padding-top: 0em; /*change back to 1em if the top is going off the screen*/
+    height: 100%; /* may need to be adjusted based on platform */
+    max-height: 101vh; /* may need to be adjusted based on platform */
+    width: 100%;
+    max-width: 100vw;
+    z-index: -2;
+}
+
+body::after {
+    content: "";
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 101%; /* may need to be adjusted based on platform */
+    max-height: 101vh; /* may need to be adjusted based on platform */
+    position: absolute;
+    z-index: -1;
+}
+
+body:not(.night)::after {
+    opacity: 1;
+}
+
+body.night::after {
+
+    opacity: 1;
+}
+
+/* CARD */
+
+.note {
+	margin: 0 auto;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 1.5vh;
+	max-width: 35em;
+	border-radius: 1.2em;
+    position: relative;
+}
+
+/*removed dropshadow*/
+
+.card {
+    background-color: /*replace this comment with transparent if fails*/ !important; /*Change back to transparent if background goes weird color*/
+}
+
+.front,
+.back,
+.onesided {
+	padding: 0 2em 1em 2em;
+ 	backdrop-filter: blur(10px);
+ 	-webkit-backdrop-filter: blur(10px);
+ 	-moz-backdrop-filter: blur(10px);
+    -o-backdrop-filter: blur(10px);
+    -ms-backdrop-filter: blur(10px);
+    overflow: auto;
+}
+
+.back {
+    z-index: 10;
+}
+
+#deck {
+    font-size: 1em;
+    font-weight: 400;
+    margin-top: .75em;
+    text-align: center;
+}
+
+:not(.night) #deck {
+    color: rgba(255,255,255,.3);
+}
+
+.night #deck {
+    color: rgba(255,255,255,.3);
+}
+
+.front {
+	background-color: rgba(18,116,224,.6);
+}
+
+.front {
+	color: white;
+	margin: 1em 0 0 0;
+	border-top-left-radius: 1.2em; 
+	border-top-right-radius: 1.2em;
+}
+
+.front a,
+.front a:link,
+.front a:visited,
+.front a:hover,
+.front a:active {
+	color: blue;
+	text-decoration: none;
+}
+
+.back {
+	border-bottom-left-radius: 1.2em;
+	border-bottom-right-radius: 1.2em;
+	margin: 0;
+}
+
+.mobile :not(.night) .back,
+.mobile :not(.night) .onesided {
+	background-color: rgba(100, 149, 237,.4); /*changes background color*/
+ 	color: black; /*changes front font color*/
+}
+
+.mobile .night .back,
+.mobile .night .onesided {
+	background-color: rgba(100, 149, 237,.4); /*changes background color*/
+ 	color: black; /*changes front font color*/
+}
+
+:not(.night) .back,
+:not(.night) .onesided {
+	background-color: rgba(100, 149, 237,.4); /*changes background color*/
+ 	color: white; /*changes front font color*/
+}
+
+.night .back,
+.night .onesided {
+	background-color: rgba(100, 149, 237,.4); /*changes background color*/
+ 	color: white; /*changes front font color*/
+}
+
+.onesided {
+	border-radius: 1.2em;
+	margin: 1em 0;
+}
+
+:not(.night) .back a,
+:not(.night) .back a:link,
+:not(.night) .back a:visited,
+:not(.night) .back a:hover,
+:not(.night) .back a:active,
+:not(.night) .onesided a,
+:not(.night) .onesided a:link,
+:not(.night) .onesided a:visited,
+:not(.night) .onesided a:hover,
+:not(.night) .onesided a:active {
+	color: #1274E0;
+	text-decoration: none;
+}
+
+.night .back a,
+.night .back a:link,
+.night .back a:visited,
+.night .back a:hover,
+.night .back a:active,
+.night .onesided a,
+.night .onesided a:link,
+.night .onesided a:visited,
+.night .onesided a:hover,
+.night .onesided a:active {
+	color: #1274E0; /* alt #9bc7f7 */
+	text-decoration: none;
+}
+
+.row {
+	padding: 1em 0 0 0;
+}
+
+
+
+
+
+
+
+:not(.backtemplate) .backonly {
+	display: none;
+}
+
+.backtemplate .backonly {
+	display: block;
+}
+
+.backtemplate .frontonly {
+	display: none;
+}
